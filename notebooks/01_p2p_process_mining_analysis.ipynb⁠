@@ -1,10 +1,14 @@
 import pandas as pd
 import pm4py
-from pm4py.objects.log.util import dataframe_utils
 
-# Load the BPI Challenge 2019 dataset from your data directory
-file_path = "../data/bpi_challenge_2019.csv.gz"
-df = pd.read_csv(file_path)
+# Load the Object-Centric Event Log (.jsonocel) from your data folder
+file_path = "data/BPIC19.jsonocel"
+ocel = pm4py.read_ocel(file_path)
+
+print("OCEL successfully loaded!")
+print(f"Number of events: {len(ocel.events)}")
+print(f"Number of objects: {len(ocel.objects)}")
+
 
 # Assertions to confirm scale matches expected targets (~1.5M events, ~76k cases)[span_2](start_span)[span_2](end_span)
 print(f"Total Events: {len(df):,}")
