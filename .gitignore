@@ -1,0 +1,18 @@
+# Raw data (see data/README.md for how to fetch it)
+data/*.jsonocel
+data/*.xes
+data/*.xes.gz
+data/*.zip
+data/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
